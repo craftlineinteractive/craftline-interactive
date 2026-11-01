@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+@media (prefers-reduced-motion: no-preference) {
+  .page-enter {
+    animation: page-enter 420ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  }
+
+  .site-reveal:not(.is-visible) {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  .site-reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 520ms cubic-bezier(0.2, 0.7, 0.2, 1), transform 520ms cubic-bezier(0.2, 0.7, 0.2, 1);
+  }
+
+  @keyframes page-enter {
+    from {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@font-face {
+  font-family: "Phosphor";
+  src: url("../../node_modules/phosphor-icons/src/fonts/Phosphor.woff2") format("woff2");
+  font-style: normal;
+  font-weight: normal;
+  font-display: block;
+}
+
+[class^="ph-"]::before,
+[class*=" ph-"]::before {
+  font: normal normal normal 1em/1 "Phosphor";
+  color: inherit;
+  flex-shrink: 0;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ph-arrow-right::before { content: "\f28b"; }
+.ph-arrow-down-right::before { content: "\f26b"; }
+.ph-arrow-up-right::before { content: "\f2a0"; }
+.ph-asterisk::before { content: "\f2b4"; }
+.ph-flower::before { content: "\f409"; }
+.ph-flower-lotus::before { content: "\f40a"; }
+.ph-google-play-logo::before { content: "\f446"; }
+.ph-heart::before { content: "\f460"; }
+.ph-leaf::before { content: "\f487"; }
+.ph-list::before { content: "\f497"; }
+.ph-moon::before { content: "\f4c4"; }
+.ph-planet::before { content: "\f52a"; }
+.ph-sparkle::before { content: "\f59c"; }
+.ph-star-four::before { content: "\f5b5"; }
+.ph-warning::before { content: "\f62c"; }
+.ph-wave-sine::before { content: "\f631"; }
+.ph-x::before { content: "\f642"; }
