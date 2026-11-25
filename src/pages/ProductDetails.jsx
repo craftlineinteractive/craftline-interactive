@@ -38,8 +38,8 @@ export default function ProductDetailsPage({ expectedKind }) {
         <section className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-24">
           <div className="mb-9 max-w-2xl">
             <span className="font-mono text-[10px] uppercase tracking-[.15em] text-[#77736b]">A little more to discover</span>
-            <h2 className="mt-4 font-sans text-4xl font-medium leading-[.98] tracking-[-.075em] md:text-6xl">Find a word.<br /><em className="text-[#ef7058]">Learn something new.</em></h2>
-            <p className="mt-4 text-sm leading-7 text-[#6d6962]">Explore the features that make each puzzle a chance to discover, learn, and play.</p>
+            <h2 className="mt-4 font-sans text-4xl font-medium leading-[.98] tracking-[-.075em] md:text-6xl">{product.featuresTitle ?? 'Find a word.'}<br /><em className="text-[#ef7058]">{product.featuresSubtitle ?? 'Learn something new.'}</em></h2>
+            <p className="mt-4 text-sm leading-7 text-[#6d6962]">{product.featuresDescription ?? 'Explore the features that make each puzzle a chance to discover, learn, and play.'}</p>
           </div>
           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {product.features.map((feature, index) => (

@@ -1,6 +1,7 @@
+import docView from './products/apps/doc-view'
 import wordSearch from './products/games/word-search'
 
-export const apps = []
+export const apps = [docView]
 export const games = [wordSearch]
 export const products = [...apps, ...games]
 
